@@ -6,6 +6,7 @@ import './App.css';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import ComponeteContext from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
+import { ComponenteEstado } from './components/ComponenteEstado';
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <ComponeteContext></ComponeteContext> */}
-        <Ejemplo4 nombre={'Pepe'}>
+        {/* <Ejemplo4 nombre={'Pepe'}>
           <h3>Contenido del props.children</h3>
-        </Ejemplo4>
+        </Ejemplo4> */}
+        <ComponenteEstado></ComponenteEstado>
       </header>
     </div>
   );
