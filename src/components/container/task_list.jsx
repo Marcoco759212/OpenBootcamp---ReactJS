@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task.class';
 import TaskComponent from '../pure/task';
+import '../../styles/task.scss'
 
 const TaskListComponent = () => {
 
@@ -26,9 +27,9 @@ const TaskListComponent = () => {
 
     return (
         <div>
-            <div>
+            <h1>
                 Your Tasks:
-            </div>
+            </h1>
             {/** TODO: Aplicar un for each para renderizar las tareas */}        
             <TaskComponent task={defaultTask}></TaskComponent>
         </div>
