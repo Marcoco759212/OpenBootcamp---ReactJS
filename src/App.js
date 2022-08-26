@@ -20,7 +20,8 @@ function App() {
         {/* <Ejemplo4 nombre={'Pepe'}>
           <h3>Contenido del props.children</h3>
         </Ejemplo4> */}
-        <ComponenteEstado></ComponenteEstado>
+        {/* <ComponenteEstado></ComponenteEstado> */}
+        
       </header>
     </div>
   );
