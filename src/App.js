@@ -1,8 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import TaskListComponent from './components/container/task_list';
-import GreetingStyled from './components/pure/forms/greetingStyled';
+// import TaskListComponent from './components/container/task_list';
+// import GreetingStyled from './components/pure/forms/greetingStyled';
+import Father from './components/container/father';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import ComponeteContext from './hooks/Ejemplo3';
@@ -14,7 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* <Greeting name="Marco"></Greeting>   */}
-        <GreetingStyled name={'Marco'}></GreetingStyled>
+        {/* <GreetingStyled name={'Marco'}></GreetingStyled> */}
         {/* <TaskListComponent></TaskListComponent> */}
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
@@ -23,7 +26,7 @@ function App() {
           <h3>Contenido del props.children</h3>
         </Ejemplo4> */}
         {/* <ComponenteEstado></ComponenteEstado> */}
-
+        <Father></Father>
       </header>
     </div>
   );
