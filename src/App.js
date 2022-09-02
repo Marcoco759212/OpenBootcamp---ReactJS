@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import { Clock } from './components/clock';
+import ContactListComponent from './components/container/contact_list';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Clock nombre={'Marco'} apellidos={'hdz'}></Clock>
+        <ContactListComponent></ContactListComponent>
       </header>
     </div>
   );

@@ -1,0 +1,32 @@
+.row-data{
+    display: flex;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.row-btns{
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-around;
+}
+
+.status-btn{
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10rem;
+    border: 0;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn{
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10rem;
+    border: 0;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    background-color: darkred;
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.container{
+    border: 2px solid white;
+    border-radius: 1rem;
+}
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.data-inputs{
+    height: 6vmin;
+    width: 50vmin;
+    margin: 0.3rem 0;
+    font-size: calc(10px + 2vmin);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.create-contact{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 10rem;
+    border: 0;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    background-color: #1db653;
+    cursor: pointer;
+}
+
+.back-btn{
+    border: 0;
+    position: relative;
+    right: 35%;
+    color: darkred;
+    background-color: #282c34 ;
+    font-size: calc(0.2rem + 2vmin);
+    cursor: pointer;
+}
