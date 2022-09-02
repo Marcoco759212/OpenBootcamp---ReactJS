@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
-// import TaskListComponent from './components/container/task_list';
+import TaskListComponent from './components/container/task_list';
 // import GreetingStyled from './components/pure/forms/greetingStyled';
 import Father from './components/container/father';
 // import Ejemplo1 from './hooks/Ejemplo1';
@@ -18,7 +18,7 @@ function App() {
       <header className="App-header">
         {/* <Greeting name="Marco"></Greeting>   */}
         {/* <GreetingStyled name={'Marco'}></GreetingStyled> */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <ComponeteContext></ComponeteContext> */}
@@ -26,7 +26,7 @@ function App() {
           <h3>Contenido del props.children</h3>
         </Ejemplo4> */}
         {/* <ComponenteEstado></ComponenteEstado> */}
-        <Father></Father>
+        {/* <Father></Father> */}
       </header>
     </div>
   );
