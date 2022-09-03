@@ -41,7 +41,6 @@ const TaskListComponent = () => {
 
     const addTask = (task) => {
         console.log('ejecutando completed task');
-        const index = tasks.indexOf(task)
         const temTasks = [...tasks]
         temTasks.push(task)
         setTasks(temTasks)
