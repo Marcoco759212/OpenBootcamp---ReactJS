@@ -8,6 +8,7 @@ import TaskListComponent from './components/container/task_list';
 import Father from './components/container/father';
 import OptionalRenders from './components/pure/forms/optionalRenders';
 import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import ComponeteContext from './hooks/Ejemplo3';
@@ -20,7 +21,7 @@ function App() {
       <header className="App-header">
         {/* <Greeting name="Marco"></Greeting>   */}
         {/* <GreetingStyled name={'Marco'}></GreetingStyled> */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <ComponeteContext></ComponeteContext> */}
@@ -30,7 +31,8 @@ function App() {
         {/* <ComponenteEstado></ComponenteEstado> */}
         {/* <Father></Father> */}
         {/*<OptionalRenders></OptionalRenders>  Renderizado condicional*/}
-        <LoginFormik></LoginFormik>
+        {/* <LoginFormik></LoginFormik> */}
+        {/* <RegisterFormik></RegisterFormik> */}
       </header>
     </div>
   );

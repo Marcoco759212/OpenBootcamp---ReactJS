@@ -3,7 +3,7 @@ import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task.class';
 import TaskComponent from '../pure/task';
 import '../../styles/task.scss'
-import TaskForm from '../pure/forms/taskForm';
+import TaskFormik from '../pure/forms/taskFormik';
 
 const TaskListComponent = () => {
 
@@ -86,7 +86,7 @@ const TaskListComponent = () => {
             <div className='col-12'>
                 <div className='card'>
                     <div className='card-header p-3'>
-                        <h5>Your Tasks:</h5>
+                        <h1>Your Tasks:</h1>
                     </div>
                     <div className='card-body' data-mdb-perfect-scrollbar='true' style={{ position: 'relative', height: '400px' }}>
                         { tasks.length ? 
@@ -97,7 +97,8 @@ const TaskListComponent = () => {
                     </div>
                 </div>
             </div>
-            <TaskForm add={ addTask }></TaskForm>
+            {/* <TaskForm add={ addTask }></TaskForm> */}
+            <TaskFormik add={addTask} ></TaskFormik>
         </div>
     );
 }

@@ -1,0 +1,47 @@
+.form-tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.title-form,
+.msg-send{
+    margin: 1rem 0;
+    color: white;
+}
+
+.rows-form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cols-form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.labels-form{
+    width: 30%;
+    text-align: right;
+    color: white;
+
+}
+
+.inputs-form{
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.messages-form{
+    border-top: 1px solid red;
+    color: red;
+    font-size: 1rem;
+    margin: 0.2rem 0.5rem;
+}
+
+.btn-form{
+    border-radius: 0.5rem;
+}
