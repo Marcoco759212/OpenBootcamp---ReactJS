@@ -7,6 +7,7 @@ import TaskListComponent from './components/container/task_list';
 // import GreetingStyled from './components/pure/forms/greetingStyled';
 import Father from './components/container/father';
 import OptionalRenders from './components/pure/forms/optionalRenders';
+import LoginFormik from './components/pure/forms/loginFormik';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import ComponeteContext from './hooks/Ejemplo3';
@@ -28,7 +29,8 @@ function App() {
         </Ejemplo4> */}
         {/* <ComponenteEstado></ComponenteEstado> */}
         {/* <Father></Father> */}
-        <OptionalRenders></OptionalRenders> {/* Renderizado condicional*/}
+        {/*<OptionalRenders></OptionalRenders>  Renderizado condicional*/}
+        <LoginFormik></LoginFormik>
       </header>
     </div>
   );

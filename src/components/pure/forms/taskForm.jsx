@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../../models/task.class';
 import { LEVELS } from '../../../models/levels.enum';
+import '../../../styles/taskForm.scss'
 
 const TaskForm = ({add}) => {
 
@@ -23,8 +24,8 @@ const TaskForm = ({add}) => {
 
     return (
         <form onSubmit={ addTask } 
-            className='d-flex justify-content-center align-items-center mb-4'>
-             <div className='form-outline flex-fill'>
+            className='d-flex justify-content-center align-items-center mb-4 form'>
+             <div className='form-outline flex-fill div-form'>
                 <input ref={nameRef} 
                     id='inputName' 
                     type='text' 
@@ -39,17 +40,20 @@ const TaskForm = ({add}) => {
                     className='form-control form-control-lg' 
                     required 
                     placeholder='task description'/>
-                <label htmlFor='selectLevel' 
-                className='sr-only'>Priority</label>
-                <select ref={levelRef} 
-                    defaultValue={LEVELS.NORMAL} 
-                    id='selectLevel'>
-                    <option value={LEVELS.NORMAL}>Normal</option>
-                    <option value={LEVELS.URGENT}>Urgent</option>
-                    <option value={LEVELS.BLOCKING}>Blocking</option>
-                </select>
+                <div className='content-priority'>
+                    <label htmlFor='selectLevel' 
+                    className='sr-only label-priority'>Priority</label>
+                    <select ref={levelRef} 
+                        defaultValue={LEVELS.NORMAL} 
+                        id='selectLevel'
+                        className='select-priority'>
+                        <option value={LEVELS.NORMAL}>Normal</option>
+                        <option value={LEVELS.URGENT}>Urgent</option>
+                        <option value={LEVELS.BLOCKING}>Blocking</option>
+                    </select>
+                </div>
                 <button type='submit'
-                    className='btn btn-primary btn-lg ms-2'>
+                    className='btn btn-primary btn-lg btn-addForm'>
                     Add
                 </button>
              </div>
