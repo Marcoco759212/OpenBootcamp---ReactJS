@@ -3,3 +3,23 @@
     gap: 1rem;
     flex-direction: column;
 }
+
+.rows-form{
+    display: flex;
+    gap: 1rem;
+}
+
+.labels-login-form{
+    width: 35%;
+}
+
+.inputs-login-form{
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.btn-login-form{
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+}

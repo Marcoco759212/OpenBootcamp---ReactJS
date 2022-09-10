@@ -4,10 +4,11 @@ import * as Yup from 'yup'
 import { User } from '../../../models/users.class';
 import { ROLES } from '../../../models/roles.enum';
 import '../../../styles/registerFormik.scss'
+import { useNavigate } from 'react-router-dom';
 
 const RegisterFormik = () => {
 
-    let user = new User();
+    const history = useNavigate();
 
     const initialValues = {
         username: '',
@@ -49,7 +50,7 @@ const RegisterFormik = () => {
 
     return (
         <div>
-             <h4>Register Formik</h4>
+             <h1>Register Formik</h1>
              <Formik 
                 initialValues={initialValues}
                 validationSchema={registerSchema}
@@ -57,6 +58,8 @@ const RegisterFormik = () => {
                     async (values) => {
                         await new Promise((r) => setTimeout(r, 1000));
                         alert(JSON.stringify(values, null, 2));
+                        await localStorage.setItem('credentials', JSON.stringify(values))
+                        history('/login')
                     }
                 }>
                 {
@@ -69,61 +72,93 @@ const RegisterFormik = () => {
                         handleBlur
                     }) => (
                         <Form className='register-form'>
-                            <label htmlFor='username'>
-                                Username
-                            </label>
-                            <Field id='username' 
-                                name='username' 
-                                type='text' 
-                                placeholder='your username'/>
-                            { errors.username && touched.username && 
-                                (
-                                    <ErrorMessage name="username" component="div"></ErrorMessage>
-                                )    
-                            }
-                            <label htmlFor='email'>
-                                Email
-                            </label>
-                            <Field id='email' 
-                                name='email' 
-                                type='email' 
-                                placeholder='your@email.com'/>
+                            <div className='rows-form'>
+                                <label htmlFor='username'
+                                    className='labels-signin-form'>
+                                    Username
+                                </label>
+                                <div>
+                                    <Field id='username' 
+                                        name='username' 
+                                        type='text' 
+                                        placeholder='your username'
+                                        className='inputs-signin-form'
+                                        />
+                                    { errors.username && touched.username && 
+                                        (
+                                            <ErrorMessage name="username" 
+                                                component="div"
+                                                className='messages-form'></ErrorMessage>
+                                        )    
+                                    }
+                                </div>
+                            </div>
+                            <div className='rows-form'>
+                                <label htmlFor='email'
+                                    className='labels-signin-form'>
+                                    Email
+                                </label>
+                                <div>
+                                    <Field id='email' 
+                                        name='email' 
+                                        type='email' 
+                                        placeholder='your@email.com'
+                                        className='inputs-signin-form'
+                                        />
 
-                            { errors.email && touched.email && 
-                                (
-                                    <ErrorMessage name="email" component="div"></ErrorMessage>
-                                )    
-                            }
+                                    { errors.email && touched.email && 
+                                        (
+                                            <ErrorMessage name="email" 
+                                                component="div"
+                                                className='messages-form'></ErrorMessage>
+                                        )    
+                                    }
+                                </div>
+                            </div>
+                            <div className='rows-form'>
+                                <label htmlFor='password'
+                                    className='labels-signin-form'>
+                                    Password
+                                </label>
+                                <div>
+                                    <Field id='password' 
+                                        name='password' 
+                                        type='password' 
+                                        placeholder='your password'
+                                        className='inputs-signin-form'
+                                        />
 
-                            <label htmlFor='password'>
-                                Password
-                            </label>
-                            <Field id='password' 
-                                name='password' 
-                                type='password' 
-                                placeholder='your password'/>
+                                    { errors.password && touched.password && 
+                                        (
+                                            <ErrorMessage name="password" 
+                                                component="div"
+                                                className='messages-form'></ErrorMessage>
+                                        )    
+                                    }
+                                </div>
+                            </div>
+                            <div className='rows-form'>
+                                <label htmlFor='confirm'
+                                    className='labels-signin-form'>
+                                    Password
+                                </label>
+                                <div>
+                                    <Field id='confirm' 
+                                        name='confirm' 
+                                        type='confirm' 
+                                        placeholder='Confirm password'
+                                        className='inputs-signin-form'
+                                        />
 
-                            { errors.password && touched.password && 
-                                (
-                                    <ErrorMessage name="password" component="div"></ErrorMessage>
-                                )    
-                            }
-
-                            
-                            <label htmlFor='confirm'>
-                                Password
-                            </label>
-                            <Field id='confirm' 
-                                name='confirm' 
-                                type='confirm' 
-                                placeholder='Confirm password'/>
-
-                            { errors.confirm && touched.confirm && 
-                                (
-                                    <ErrorMessage name="confirm" component="div"></ErrorMessage>
-                                )    
-                            }
-
+                                    { errors.confirm && touched.confirm && 
+                                        (
+                                            <ErrorMessage name="confirm" 
+                                                component="div"
+                                                className='messages-form'></ErrorMessage>
+                                        )    
+                                    }
+                                </div>
+                            </div>
                             <button type='submit'>Register acount</button>
                             {isSubmitting ? (<p>Registering user...</p>) : null}
                         </Form>

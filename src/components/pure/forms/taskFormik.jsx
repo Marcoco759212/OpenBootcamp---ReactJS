@@ -82,7 +82,7 @@ const TaskFormik = ({add}) => {
                                 <div className='rows-form'>
                                     <label htmlFor='taskname'
                                         className='labels-form'>
-                                        Username
+                                        Taskname
                                     </label>
                                     <div className='cols-form'>
                                         <Field id='taskname' 
@@ -103,7 +103,7 @@ const TaskFormik = ({add}) => {
                                 <div className='rows-form'>
                                     <label htmlFor='description'
                                     className='labels-form'>
-                                        Email
+                                        Description
                                     </label>
                                     <div className='cols-form'>
                                         <Field id='description' 

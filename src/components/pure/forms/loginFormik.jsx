@@ -23,18 +23,29 @@ const LoginFormik = ({loggedTo}) => {
      
     const history = useNavigate();
 
+    const loggin = (response, values) => {
+        const resultVals = JSON.parse(response);
+        if(values.email === resultVals.email
+            && values.password === resultVals.password){
+                loggedTo()
+                history('/tasks')
+        }else{
+            alert('Usuario o password incorrectos')
+        }
+        // 
+    }
+
     return (
         <div>
-            <h4>Login Formik</h4>
+            <h1>Login Formik</h1>
             <Formik 
                 initialValues={ initialCredentials }
                 validationSchema={ loginSchema }
                 onSubmit={ async (values) => {
                     await new Promise((r) => setTimeout(r, 1000));
-                    alert(JSON.stringify(values, null, 2));
-                    await localStorage.setItem('credentials',values)
-                    history('/profile')
-                    loggedTo()
+                    //alert(JSON.stringify(values, null, 2));
+                    const response = await localStorage.getItem('credentials')
+                    loggin(response, values)
                 }}>
 
                 {( {values,
@@ -44,35 +55,54 @@ const LoginFormik = ({loggedTo}) => {
                     handleChange,
                     handleBlur} ) => (
                         <Form className='form'>
-                            <label htmlFor='email'>
-                                Email
-                            </label>
-                            <Field id='email' 
-                                name='email' 
-                                type='email' 
-                                placeholder='your@email.com'/>
+                            <div className='rows-form'>
+                                <label htmlFor='email'
+                                    className='labels-login-form'>
+                                    Email
+                                </label>
+                                <div className='cols-form'>
+                                    <Field id='email' 
+                                        name='email' 
+                                        type='email' 
+                                        placeholder='your@email.com'
+                                        className='inputs-login-form'
+                                        />
 
-                            { errors.email && touched.email && 
-                                (
-                                    <ErrorMessage name="email" component="div"></ErrorMessage>
-                                )    
-                            }
+                                    { errors.email && touched.email && 
+                                        (
+                                            <ErrorMessage name="email" 
+                                                component="div"
+                                                className='messages-form'></ErrorMessage>
+                                        )    
+                                    }
+                                </div>
+                            </div>
+                            <div className='rows-form'>
+                                <label htmlFor='password'
+                                    className='labels-login-form'>
+                                    Password
+                                </label>
+                                <div className='cols-form'>
+                                    <Field id='password' 
+                                        name='password' 
+                                        type='password' 
+                                        placeholder='your password'
+                                        className='inputs-login-form'
+                                        />
 
-                            <label htmlFor='password'>
-                                Password
-                            </label>
-                            <Field id='password' 
-                                name='password' 
-                                type='password' 
-                                placeholder='your password'/>
-
-                            { errors.password && touched.password && 
-                                (
-                                    <ErrorMessage name="password" component="div"></ErrorMessage>
-                                )    
-                            }
-
-                            <button type='submit'>Login</button>
+                                    { errors.password && touched.password && 
+                                        (
+                                            <ErrorMessage name="password" 
+                                                component="div"
+                                                className='messages-form'></ErrorMessage>
+                                        )    
+                                    }
+                                </div>
+                            </div>
+                            <button type='submit'
+                                className='btn-form'>
+                                    Login
+                            </button>
                             {isSubmitting ? (<p>Login your credentials</p>) : null}
                         </Form>
                 )}
