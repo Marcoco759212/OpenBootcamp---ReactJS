@@ -43,7 +43,7 @@ const TaskFormik = ({add}) => {
     }
 
     return (
-        <div>
+        <div className='container-form'>
             <Formik
                 initialValues={initialValues}
                 validationSchema={registerSchema}

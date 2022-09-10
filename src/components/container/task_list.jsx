@@ -49,7 +49,7 @@ const TaskListComponent = () => {
     }
 
     const taskTable = (
-            <table>
+            <table className='task-container'>
                 <thead>
                     <tr>
                         <th scope='col'>
@@ -86,7 +86,7 @@ const TaskListComponent = () => {
             <div className='col-12'>
                 <div className='card'>
                     <div className='card-header p-3'>
-                        <h1>Your Tasks:</h1>
+                        <h1 className='task-title'>Your Tasks:</h1>
                     </div>
                     <div className='card-body' data-mdb-perfect-scrollbar='true' style={{ position: 'relative', height: '400px' }}>
                         { tasks.length ? 

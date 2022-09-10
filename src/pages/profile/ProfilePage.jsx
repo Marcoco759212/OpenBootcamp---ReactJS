@@ -1,12 +1,12 @@
 import React from 'react';
-import {useLocation, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
-const HomePage = () => {
+const ProfilePage = () => {
 
     const history = useNavigate();
 
-    const navigate = (path) => {
-        history(path);
+    const navigateTo = (path) => {
+        history(path)
     }
 
     const goBack = () => {
@@ -15,10 +15,10 @@ const HomePage = () => {
 
     return (
         <div>
-            <h1>Home Page</h1>
+            <h1>Your profile</h1>
             <div>
-                <button onClick={ () => navigate('/profile')}>
-                    Go to profile
+                <button onClick={ () => navigateTo('/tasks') }>
+                    Tasks
                 </button>
             </div>
             <div>
@@ -30,4 +30,4 @@ const HomePage = () => {
     );
 }
 
-export default HomePage;
+export default ProfilePage;

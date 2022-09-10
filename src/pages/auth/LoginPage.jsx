@@ -1,9 +1,10 @@
 import React from 'react';
+import LoginFormik from '../../components/pure/forms/loginFormik';
 
-const LoginPage = () => {
+const LoginPage = ({logged}) => {
     return (
         <div>
-            <h1>Login Page</h1>
+            <LoginFormik loggedTo={logged}></LoginFormik>
         </div>
     );
 }
