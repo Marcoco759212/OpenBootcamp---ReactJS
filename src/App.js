@@ -9,6 +9,9 @@ import Father from './components/container/father';
 import OptionalRenders from './components/pure/forms/optionalRenders';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import AsyncExamples from './components/pure/AsyncExamples';
+import ObservableExample from './components/pure/ObservableExample';
+import FetchExample from './components/pure/FetchExample';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import ComponeteContext from './hooks/Ejemplo3';
@@ -21,7 +24,7 @@ function App() {
       <header className="App-header">
         {/* <Greeting name="Marco"></Greeting>   */}
         {/* <GreetingStyled name={'Marco'}></GreetingStyled> */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
         {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <ComponeteContext></ComponeteContext> */}
@@ -33,6 +36,9 @@ function App() {
         {/*<OptionalRenders></OptionalRenders>  Renderizado condicional*/}
         {/* <LoginFormik></LoginFormik> */}
         {/* <RegisterFormik></RegisterFormik> */}
+        {/* <AsyncExamples></AsyncExamples> */}
+        {/* <ObservableExample></ObservableExample> */}
+        <FetchExample></FetchExample>
       </header>
     </div>
   );
