@@ -12,6 +12,7 @@ import RegisterFormik from './components/pure/forms/registerFormik';
 import AsyncExamples from './components/pure/AsyncExamples';
 import ObservableExample from './components/pure/ObservableExample';
 import FetchExample from './components/pure/FetchExample';
+import AxiosExample from './components/pure/AxiosExample';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import ComponeteContext from './hooks/Ejemplo3';
@@ -38,7 +39,8 @@ function App() {
         {/* <RegisterFormik></RegisterFormik> */}
         {/* <AsyncExamples></AsyncExamples> */}
         {/* <ObservableExample></ObservableExample> */}
-        <FetchExample></FetchExample>
+        {/* <FetchExample></FetchExample> */}
+        <AxiosExample></AxiosExample>
       </header>
     </div>
   );
