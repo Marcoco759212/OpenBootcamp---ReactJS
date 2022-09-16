@@ -1,0 +1,30 @@
+.card-container{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.card-actions-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.typography-text{
+    color: white;
+}
+
+.card-actions-lbl{
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.span-lbl{
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.span-lbl-bold{
+    font-weight: bold;
+}
