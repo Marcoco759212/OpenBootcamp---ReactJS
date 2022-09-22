@@ -3,16 +3,17 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import TaskListComponent from './components/container/task_list';
+// import TaskListComponent from './components/container/task_list';
 // import GreetingStyled from './components/pure/forms/greetingStyled';
-import Father from './components/container/father';
-import OptionalRenders from './components/pure/forms/optionalRenders';
-import LoginFormik from './components/pure/forms/loginFormik';
-import RegisterFormik from './components/pure/forms/registerFormik';
-import AsyncExamples from './components/pure/AsyncExamples';
-import ObservableExample from './components/pure/ObservableExample';
-import FetchExample from './components/pure/FetchExample';
-import AxiosExample from './components/pure/AxiosExample';
+// import Father from './components/container/father';
+// import OptionalRenders from './components/pure/forms/optionalRenders';
+// import LoginFormik from './components/pure/forms/loginFormik';
+// import RegisterFormik from './components/pure/forms/registerFormik';
+// import AsyncExamples from './components/pure/AsyncExamples';
+// import ObservableExample from './components/pure/ObservableExample';
+// import FetchExample from './components/pure/FetchExample';
+// import AxiosExample from './components/pure/AxiosExample';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import ComponeteContext from './hooks/Ejemplo3';
@@ -40,7 +41,8 @@ function App() {
         {/* <AsyncExamples></AsyncExamples> */}
         {/* <ObservableExample></ObservableExample> */}
         {/* <FetchExample></FetchExample> */}
-        <AxiosExample></AxiosExample>
+        {/* <AxiosExample></AxiosExample> */}
+        <AxiosCRUDExample></AxiosCRUDExample>
       </header>
     </div>
   );
