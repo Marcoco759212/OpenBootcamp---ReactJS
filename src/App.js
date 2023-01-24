@@ -1,14 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-// import Greeting from './components/pure/greeting';
-import TaskListComponent from './components/container/task_list';
+import TodoContainer from './components/container/TodoContainer';
+import TodoFormContainer from './components/container/TodoFormContainer';
+import FilterOptions from './components/pure/FilterOptions';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Greeting name="Marco"></Greeting>   */}
-        <TaskListComponent></TaskListComponent>
+        <TodoContainer></TodoContainer>
+        <TodoFormContainer></TodoFormContainer>
+        <FilterOptions></FilterOptions>
       </header>
     </div>
   );
