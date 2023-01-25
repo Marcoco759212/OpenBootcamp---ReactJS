@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-// import Greeting from './components/pure/greeting';
-import TaskListComponent from './components/container/task_list';
+import Counter from './components/pure/Counter';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Greeting name="Marco"></Greeting>   */}
-        <TaskListComponent></TaskListComponent>
+        <Counter></Counter>
       </header>
     </div>
   );
